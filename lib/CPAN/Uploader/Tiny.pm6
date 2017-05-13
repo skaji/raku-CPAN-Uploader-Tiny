@@ -4,17 +4,23 @@ unit class CPAN::Uploader::Tiny:ver<0.0.1>;
 use CPAN::Uploader::Tiny::MultiPart;
 use HTTP::Tinyish;
 
-has $.url = %*ENV<CPAN_UPLOADER_UPLOAD_URI> || 'https://pause.perl.org/pause/authenquery';
+has $.url;
 has $.user;
 has $.password;
+has $.agent;
 
-method new($user, $password) {
-    self.bless(:$user, :$password);
+submethod BUILD(:$!url, :$!user, :$!password, :$!agent) {
+    $!url ||= %*ENV<CPAN_UPLOADER_UPLOAD_URI> || 'https://pause.perl.org/pause/authenquery';
+    $!agent ||= do {
+        my $name = self.^name;
+        my $ver  = self.^ver.Str;
+        "perl6 $name/$ver";
+    };
 }
 
 method new-from-config($file) {
     my %config = self!read-config($file);
-    self.new(%config<user>, %config<password>);
+    self.new(user => %config<user>, password => %config<password>);
 }
 
 method !read-config($file) {
@@ -76,9 +82,9 @@ method upload($tarball, :$subdirectory, :$async) {
     };
 
     if $async {
-        return HTTP::Tinyish.new(:async).post($url, |%option).then: -> $p { &cb($p.result) };
+        return HTTP::Tinyish.new(:$!agent, :async).post($url, |%option).then: -> $p { &cb($p.result) };
     } else {
-        return &cb( HTTP::Tinyish.new.post($url, |%option) );
+        return &cb( HTTP::Tinyish.new(:$!agent).post($url, |%option) );
     }
 }
 
