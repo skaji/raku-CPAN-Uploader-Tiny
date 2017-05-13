@@ -98,7 +98,7 @@ CPAN::Uploader::Tiny - Upload tarballs to CPAN
 
   use CPAN::Uploader::Tiny;
 
-  my $uploader = CPAN::Uploader::Tiny.new-from-config("%*ENV<HOME>/.pause");
+  my $uploader = CPAN::Uploader::Tiny.new-from-config($*HOME.add: '.pause');
   $uploader.upload("Your-Perl6-Module-0.0.1.tar.gz");
 
 =head1 DESCRIPTION
