@@ -18,7 +18,7 @@ DESCRIPTION
 
 CPAN::Uploader::Tiny uploads tarballs to CPAN.
 
-SEE ALSo
+SEE ALSO
 ========
 
 [https://github.com/rjbs/CPAN-Uploader](https://github.com/rjbs/CPAN-Uploader)
