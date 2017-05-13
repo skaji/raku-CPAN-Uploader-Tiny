@@ -99,6 +99,12 @@ CPAN::Uploader::Tiny - Upload tarballs to CPAN
 
 CPAN::Uploader::Tiny uploads tarballs to CPAN.
 
+=head1 SEE ALSo
+
+L<https://github.com/rjbs/CPAN-Uploader>
+
+L<https://github.com/Leont/cpan-upload-tiny>
+
 =head1 AUTHOR
 
 Shoichi Kaji <skaji@cpan.org>
