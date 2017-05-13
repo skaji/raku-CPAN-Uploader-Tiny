@@ -70,7 +70,7 @@ method upload($tarball, :$subdirectory, :$async) {
         },
         content => $content,
     ;
-    my &cb = -> %res {
+    my &cb = sub (%res) {
         return True if %res<success>;
         die "%res<status> %res<reason>, $!url";
     };
