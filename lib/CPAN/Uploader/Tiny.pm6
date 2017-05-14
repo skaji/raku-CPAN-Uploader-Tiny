@@ -47,7 +47,7 @@ method !read-plain-config(:$file, :@line) {
 method !read-encrypted-config(:$file) {
     my $proc = run "gpg", "-qd", "--no-tty", $file, :out, :err;
     if $proc.exitcode != 0 {
-        my $err = $proc.err.slurp;
+        my $err = $proc.err.slurp-rest;
         my $exitcode = $proc.exitcode;
         die $err ?? $err !! "gpg failed, exitcode = $exitcode";
     }
@@ -62,6 +62,7 @@ method upload($tarball, :$subdirectory, :$async) {
     $multi.add-content('HIDDENNAME', $!user);
     $multi.add-content('CAN_MULTIPART', "1");
     $multi.add-content('pause99_add_uri_uri', '');
+    $multi.add-content('pause99_add_uri_subdirtext', $subdirectory) if $subdirectory;
     $multi.add-content('SUBMIT_pause99_add_uri_httpupload', ' Upload this file from my disk ');
     $multi.add-file('pause99_add_uri_httpupload',
         filename => $tarball.IO.basename,
