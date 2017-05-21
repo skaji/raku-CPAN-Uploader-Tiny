@@ -1,5 +1,5 @@
 use v6;
-unit class CPAN::Uploader::Tiny:ver<0.0.1>;
+unit class CPAN::Uploader::Tiny:ver<0.0.2>;
 
 use CPAN::Uploader::Tiny::MultiPart;
 use HTTP::Tinyish;
