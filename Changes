@@ -1,0 +1,8 @@
+Revision history for CPAN-Uploader-Tiny
+
+{{$NEXT}}
+  - Upload to CPAN
+  - Make sure we trim user name before submitting (lizmat #4)
+
+0.0.2  2017-05-21T22:08:35+09:00
+  - Initial version
