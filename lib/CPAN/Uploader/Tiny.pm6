@@ -20,7 +20,7 @@ submethod BUILD(:$!url, :$!user, :$!password, :$!agent) {
 
 method new-from-config($file) {
     my %config = self!read-config($file);
-    self.new(user => %config<user>, password => %config<password>);
+    self.new(user => %config<user>.trim, password => %config<password>);
 }
 
 method !read-config($file) {
