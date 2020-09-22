@@ -39,7 +39,7 @@ method read-config($file) {
 method !read-plain-config(:$file, :@line) {
     @line ||= $file.IO.lines;
     my %config = gather for @line -> $line {
-        if $line ~~ /^ $<key>=(\S+) \s+ $<value>=(\S+)/ {
+        if $line ~~ /^ $<key>=(\S+) \s+ $<value>=(.+)/ {
             take $<key>.Str => $<value>.Str;
         }
     };
