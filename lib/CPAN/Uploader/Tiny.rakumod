@@ -1,4 +1,3 @@
-use v6;
 unit class CPAN::Uploader::Tiny:ver<0.0.6>:auth<cpan:SKAJI>;
 
 use CPAN::Uploader::Tiny::MultiPart;
@@ -101,10 +100,14 @@ CPAN::Uploader::Tiny - Upload tarballs to CPAN
 
 =head1 SYNOPSIS
 
-  use CPAN::Uploader::Tiny;
+=begin code :lang<raku>
 
-  my $uploader = CPAN::Uploader::Tiny.new-from-config($*HOME.add: '.pause');
-  $uploader.upload("Your-Perl6-Module-0.0.1.tar.gz");
+use CPAN::Uploader::Tiny;
+
+my $uploader = CPAN::Uploader::Tiny.new-from-config($*HOME.add: '.pause');
+$uploader.upload("Your-Raku-Module-0.0.1.tar.gz");
+
+=end code
 
 =head1 DESCRIPTION
 

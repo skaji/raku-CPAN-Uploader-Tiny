@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/skaji/perl6-CPAN-Uploader-Tiny.svg?branch=master)](https://travis-ci.org/skaji/perl6-CPAN-Uploader-Tiny)
+[![Actions Status](https://github.com/skaji/raku-CPAN-Uploader-Tiny/workflows/test/badge.svg)](https://github.com/skaji/raku-CPAN-Uploader-Tiny/actions)
 
 NAME
 ====
@@ -8,10 +8,12 @@ CPAN::Uploader::Tiny - Upload tarballs to CPAN
 SYNOPSIS
 ========
 
-    use CPAN::Uploader::Tiny;
+```raku
+use CPAN::Uploader::Tiny;
 
-    my $uploader = CPAN::Uploader::Tiny.new-from-config($*HOME.add: '.pause');
-    $uploader.upload("Your-Perl6-Module-0.0.1.tar.gz");
+my $uploader = CPAN::Uploader::Tiny.new-from-config($*HOME.add: '.pause');
+$uploader.upload("Your-Raku-Module-0.0.1.tar.gz");
+```
 
 DESCRIPTION
 ===========

@@ -1,5 +1,3 @@
-use v6;
-
 unit class CPAN::Uploader::Tiny::MultiPart;
 
 has $.boundary = 'xYzZY';
