@@ -10,13 +10,13 @@
   "description" : "Upload tarballs to CPAN",
   "license" : "Artistic-2.0",
   "name" : "CPAN::Uploader::Tiny",
-  "perl" : "6.c",
+  "perl" : "6.d",
   "provides" : {
-    "CPAN::Uploader::Tiny" : "lib/CPAN/Uploader/Tiny.pm6",
-    "CPAN::Uploader::Tiny::MultiPart" : "lib/CPAN/Uploader/Tiny/MultiPart.pm6"
+    "CPAN::Uploader::Tiny" : "lib/CPAN/Uploader/Tiny.rakumod",
+    "CPAN::Uploader::Tiny::MultiPart" : "lib/CPAN/Uploader/Tiny/MultiPart.rakumod"
   },
   "resources" : [ ],
-  "source-url" : "git://github.com/skaji/perl6-CPAN-Uploader-Tiny.git",
+  "source-url" : "https://github.com/skaji/raku-CPAN-Uploader-Tiny.git",
   "tags" : [
     "CPAN5"
   ],
