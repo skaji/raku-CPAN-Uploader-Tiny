@@ -1,25 +1,28 @@
 {
-  "auth" : "cpan:SKAJI",
-  "authors" : [
+  "auth": "cpan:SKAJI",
+  "authors": [
     "Shoichi Kaji"
   ],
-  "build-depends" : [ ],
-  "depends" : [
+  "build-depends": [
+  ],
+  "depends": [
     "HTTP::Tinyish"
   ],
-  "description" : "Upload tarballs to CPAN",
-  "license" : "Artistic-2.0",
-  "name" : "CPAN::Uploader::Tiny",
-  "perl" : "6.d",
-  "provides" : {
-    "CPAN::Uploader::Tiny" : "lib/CPAN/Uploader/Tiny.rakumod",
-    "CPAN::Uploader::Tiny::MultiPart" : "lib/CPAN/Uploader/Tiny/MultiPart.rakumod"
+  "description": "Upload tarballs to CPAN",
+  "license": "Artistic-2.0",
+  "name": "CPAN::Uploader::Tiny",
+  "perl": "6.d",
+  "provides": {
+    "CPAN::Uploader::Tiny": "lib/CPAN/Uploader/Tiny.rakumod",
+    "CPAN::Uploader::Tiny::MultiPart": "lib/CPAN/Uploader/Tiny/MultiPart.rakumod"
   },
-  "resources" : [ ],
-  "source-url" : "https://github.com/skaji/raku-CPAN-Uploader-Tiny.git",
-  "tags" : [
+  "resources": [
+  ],
+  "source-url": "https://github.com/skaji/raku-CPAN-Uploader-Tiny.git",
+  "tags": [
     "CPAN5"
   ],
-  "test-depends" : [ ],
-  "version" : "0.0.7"
+  "test-depends": [
+  ],
+  "version": "0.0.7"
 }
