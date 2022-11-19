@@ -1,4 +1,4 @@
-unit class CPAN::Uploader::Tiny:ver<0.0.7>:auth<cpan:SKAJI>;
+unit class CPAN::Uploader::Tiny;
 
 use CPAN::Uploader::Tiny::MultiPart;
 use HTTP::Tinyish;
